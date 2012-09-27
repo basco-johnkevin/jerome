@@ -21,9 +21,8 @@
                 </div>
             @endif
 
-            <form method="Post" action="{{ action('subjects@add'); }}" accept-charset="UTF-8">
+            <form method="Post" action="{{ action('enrollments@add'); }}" accept-charset="UTF-8">
                 {{ Form::token() }} 
-                <input type="text" class="span4" name="name" placeholder="name">
 
                 {{ Form::select('studentName', $studentsArray, '' , array('class' => 'span4')) }}
 
