@@ -9,10 +9,10 @@ class Enrollment extends Aware {
 	/**
 	 * Aware validation rules
 	 */
-	// public static $rules = array(
-	// 	'studentid' => 'required|integer|exists:student,studentid',
-	// 	'subjectsectionid' => 'required|integer|exists:subjectsection,subjectsectionid',
-	// );
+	public static $rules = array(
+		'studentid' => 'required|integer|exists:student,studentid',
+		'subjectsectionid' => 'required|integer|exists:subjectsection,subjectsectionid',
+	);
 
 	// public function enrollments()
 	// {
