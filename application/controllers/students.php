@@ -20,8 +20,10 @@ class Students_Controller extends Base_Controller {
 		$student->name = Input::get('name');
 		$student->student_number = Input::get('student_number');
 		
+		//return print_r($student->save());
+
 		if ($student->save()) {
-			return Redirect::back()->with('success', 'Student successfuly added!');
+			 return Redirect::back()->with('success', 'Student successfuly added!');	
 		} else {
 			return Redirect::back()->with_errors($student->errors->all());
 		}

@@ -39,7 +39,7 @@ Route::controller( array(
 	'collegeDept',
 	'subjects',
 	'subjectSections',
-	'jenrollments',
+	'enrollments',
 
 
 ) );

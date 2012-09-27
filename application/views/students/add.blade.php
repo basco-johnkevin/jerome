@@ -1,5 +1,7 @@
 @layout('layouts.main')
 
+
+
 @section('content')
 
 <div class="container">
@@ -19,6 +21,7 @@
                 <div class="alert alert-success">
                     <a class="close" data-dismiss="alert" href="#">×</a>{{ Session::get('success') }}
                 </div>
+
             @endif
 
             <form method="Post" action="{{ action('students@add'); }}" accept-charset="UTF-8">

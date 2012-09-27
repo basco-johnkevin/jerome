@@ -1,6 +1,6 @@
 <?php
 
-class Jenrollments_Controller extends Base_Controller {
+class enrollments_Controller extends Base_Controller {
 
 	public $restful = true;
 
@@ -44,17 +44,19 @@ class Jenrollments_Controller extends Base_Controller {
 
 	public function post_add()
 	{
-		$subjectSection = New SubjectSection;
-		$subjectSection->schedule = Input::get('schedule'); 
+		$enrollment = New Enrollment;
 
-		$subject = Subject::where_subjectname(Input::get('subject'))->first();
+		$student = Student::where_name(Input::get('studentName'))->first();
 		
-		$subjectSection->subjectid = $subject->subjectid;
+		// print_r($student);
 
-		if ($subjectSection->save()) {
-			return Redirect::back()->with('success', 'Subject section successfuly added!');
+		$enrollment->studentid = $student->studentid;
+		$enrollment->subjectsectionid = Input::get('subjectSectionId'); 
+
+		if ($enrollment->save()) {
+			return Redirect::back()->with('success', 'Enrollment record successfuly added!');
 		} else {
-			return Redirect::back()->with_errors($subjectSection->errors->all());
+			return Redirect::back()->with_errors($enrollment->errors->all());
 		}
 
 	}
