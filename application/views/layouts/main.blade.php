@@ -49,7 +49,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Students <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
-                                <li><a href="{{ action('students@add'); }}">Add</a></li>
+                                <li><a href="{{ action('students@add') }}">Add</a></li>
                                 <li><a href="#">Manage Students</a></li>
                             </ul>
                         </li>
@@ -58,8 +58,35 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Subjects <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
-                                <li><a href="#">Add</a></li>
-                                <li><a href="#">Manage Sbujects</a></li>
+                                <li><a href="{{ action('subjects@add') }}">Add</a></li>
+                                <li><a href="#">Manage Subjects</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">College Department <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-header">Actions</li>
+                                <li><a href="{{ action('collegeDept@add') }}">Add</a></li>
+                                <li><a href="#">Manage College Departments</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Subject Sections <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-header">Actions</li>
+                                <li><a href="{{ action('subjectSections@add') }}">Add</a></li>
+                                <li><a href="#">Manage Subject Sections</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enrollments <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-header">Actions</li>
+                                <li><a href="{{ action('enrollments@add') }}">Add</a></li>
+                                <li><a href="#">Manage Enrollments</a></li>
                             </ul>
                         </li>
 

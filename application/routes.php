@@ -36,6 +36,11 @@ Route::controller( array(
  */
 Route::controller( array(
 	'students',
+	'collegeDept',
+	'subjects',
+	'subjectSections',
+	'jenrollments',
+
 
 ) );
 // -- register NOT NESTED controllers here ENDS -- //
