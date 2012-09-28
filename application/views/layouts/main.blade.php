@@ -42,11 +42,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="#">Jerome</a>
+                <a class="brand" href="{{ URL::base() }}">Jerome</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Students <b class="caret"></b></a>
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Students <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
                                 <li><a href="{{ action('students@add') }}">Add</a></li>

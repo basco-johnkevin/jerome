@@ -44,6 +44,18 @@ class enrollments_Controller extends Base_Controller {
 
 	public function post_add()
 	{
+		$student = Student::where_name(Input::get('studentName'))->first();
+
+		// check if the student is already enrolled in a subject section
+		$enrollment = Enrollment::where_studentid_and_subjectsectionid($student->studentid, Input::get('subjectSectionId'))->first();
+
+		// return count($enrollment);
+
+		// abort adding saving the record if the record already exists
+		if (count($enrollment) >= 1) {
+			return Redirect::back()->with_errors(array('The student is already enrolled in this subject section'));
+		}
+
 		$enrollment = New Enrollment;
 
 		$student = Student::where_name(Input::get('studentName'))->first();
