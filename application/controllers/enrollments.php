@@ -1,6 +1,6 @@
 <?php
 
-class enrollments_Controller extends Base_Controller {
+class Enrollments_Controller extends Base_Controller {
 
 	public $restful = true;
 

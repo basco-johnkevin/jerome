@@ -4,6 +4,8 @@ class Subject extends Aware {
 	
 	public static $table = 'subject';
 
+	public static $key = 'subjectid';
+
 	public static $timestamps = false;
 
 	/**
@@ -14,10 +16,10 @@ class Subject extends Aware {
 		'collegedeptid' => 'required|integer|exists:collegedept,collegedeptid',
 	);
 
-	// public function enrollments()
-	// {
-	//   return $this->has_many('Enrollment');
-	// }
+	public function collegeDept()
+	{
+	  return $this->belongs_to('collegedept', 'collegedeptid');
+	}
 
 
 }

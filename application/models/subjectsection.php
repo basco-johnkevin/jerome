@@ -4,6 +4,8 @@ class SubjectSection extends Aware {
 	
 	public static $table = 'subjectsection';
 
+	public static $key = 'subjectsectionid';
+
 	public static $timestamps = false;
 
 	/**
@@ -14,10 +16,10 @@ class SubjectSection extends Aware {
 		'schedule' => 'required|max:40',
 	);
 
-	// public function enrollments()
-	// {
-	//   return $this->has_many('Enrollment');
-	// }
+	public function subject()
+	{
+	 	return $this->belongs_to('Subject', 'subjectid');
+	}
 
 
 }

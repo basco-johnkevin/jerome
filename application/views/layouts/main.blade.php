@@ -50,7 +50,7 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
                                 <li><a href="{{ action('students@add') }}">Add</a></li>
-                                <li><a href="#">Manage Students</a></li>
+                                <li><a href="{{ action('students@index') }}">Manage Students</a></li>
                             </ul>
                         </li>
 
@@ -110,7 +110,7 @@
         
     <footer>
         
-        <p>&copy; Company 2012</p>
+        <p>&copy; Jerome Baluso Gaming 2012</p>
         
     </footer> <!-- /footer -->
     

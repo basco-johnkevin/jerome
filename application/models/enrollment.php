@@ -4,6 +4,8 @@ class Enrollment extends Aware {
 	
 	public static $table = 'enrollment';
 
+	public static $key = 'enrollmentid';
+
 	public static $timestamps = false;
 
 	/**
@@ -16,7 +18,12 @@ class Enrollment extends Aware {
 
 	public function student()
 	{
-	  return $this->belongs_to('Student');
+	  return $this->belongs_to('Student', 'studentid');
+	}
+
+	public function subjectSection()
+	{
+	 	return $this->belongs_to('SubjectSection', 'subjectsectionid');
 	}
 
 

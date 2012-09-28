@@ -7,17 +7,17 @@
 		<table id="properties-table" class="table table-striped table-hover">
 			<thead>
 		      	<tr>
-		          	<th width="5%">ID</th>
-		          	<th width="16%">Name</th>
-		          	<th width="14%">Student Number</th> 
-		          	<th width="14%">Actions</th>                                           
+		          	<th width="25%">ID</th>
+		          	<th width="25%">Name</th>
+		          	<th width="25%">Student Number</th> 
+		          	<th width="25%">Actions</th>                                           
 		      </tr>
 		  	</thead>   
 		<tbody>
 
 		@foreach($students as $student)
 
-			{{ $student->name }}
+			<!-- {{ $student->name }} -->
 
 		    <tr>
 		        <td class="center">{{ $student->studentid }}</td>
@@ -28,6 +28,7 @@
 		        <td class="center">
 		     
 		           	<a href="{{ action('students@subjects', array($student->studentid)) }}" class="btn btn-info">Subjects</a>
+		           	<a href="{{ action('students@edit', array($student->studentid)) }}" class="btn btn-info">Edit</a>
 		            <a href="#myModal-delete" role="button" class="btn btn-danger" data-toggle="modal">Delete</a>
 
 		            <div class="modal hide" id="myModal-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

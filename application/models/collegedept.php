@@ -4,6 +4,8 @@ class CollegeDept extends Aware {
 	
 	public static $table = 'collegedept';
 
+	public static $key = 'collegedeptid';
+
 	public static $timestamps = false;
 
 	/**
