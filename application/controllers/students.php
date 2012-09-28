@@ -37,7 +37,7 @@ class Students_Controller extends Base_Controller {
 		// return count($student_exists);
 
 		if (count($student_exists) >= 1) {
-			return Redirect::back()->with_errors('student number already used by another student, choose another student number');
+			return Redirect::back()->with_errors(array('The student number is already used by another student, choose another student number'));
 		}
 
 		// lets commence saving baby!
