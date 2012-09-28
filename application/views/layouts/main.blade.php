@@ -68,7 +68,7 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
                                 <li><a href="{{ action('collegeDept@add') }}">Add</a></li>
-                                <li><a href="#">Manage College Departments</a></li>
+                                <li><a href="{{ action('collegeDept@index') }}">Manage College Departments</a></li>
                             </ul>
                         </li>
 
