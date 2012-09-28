@@ -4,6 +4,26 @@
 
 
 	<div class="span12">
+
+
+		 @if(Session::has('errors'))
+           @foreach(Session::get('errors') as $error)         
+                <div class="alert alert-error">
+                    <a class="close" data-dismiss="alert" href="#">×</a>{{ $error }}
+                </div>
+           @endforeach
+        @endif
+     
+        @if(Session::has('success'))  
+            <div class="alert alert-success">
+                <a class="close" data-dismiss="alert" href="#">×</a>{{ Session::get('success') }}
+            </div>
+
+        @endif
+
+
+
+		
 		<table id="properties-table" class="table table-striped table-hover">
 			<thead>
 		      	<tr>
@@ -29,9 +49,9 @@
 		     
 		           	<a href="{{ action('students@subjects', array($student->studentid)) }}" class="btn btn-info">Subjects</a>
 		           	<a href="{{ action('students@edit', array($student->studentid)) }}" class="btn btn-info">Edit</a>
-		            <a href="#myModal-delete" role="button" class="btn btn-danger" data-toggle="modal">Delete</a>
+		            <a href="#myModal-delete-{{ $student->studentid }}" role="button" class="btn btn-danger" data-toggle="modal">Delete</a>
 
-		            <div class="modal hide" id="myModal-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		            <div class="modal hide" id="myModal-delete-{{ $student->studentid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					 
 					<div class="modal-header">
 					    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -41,7 +61,7 @@
 					  <div class="modal-footer">
 					    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 					   <!--  <button class="btn btn-primary">Save changes</button> -->
-					    <a href="" class="btn btn-danger">Confirm Delete</a> 
+					    <a href="{{ action('students@delete', array($student->studentid)) }}" class="btn btn-danger">Confirm Delete</a> 
 					  </div>
 					</div>
 

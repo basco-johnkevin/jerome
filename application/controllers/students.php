@@ -73,15 +73,19 @@ class Students_Controller extends Base_Controller {
 	{
 		return View::make('students.subjects')
 			->with('student', Student::where_studentid($student_id)->first());
-
-
-		//$student = Student::where_studentid($student_id)->first();;
-
-
-		// foreach ($student->posts as $post) {
-		// 	echo $post->content;
-		// }
 		
+	}
+
+	public function get_delete($id)
+	{
+		//echo $id;
+		$student = Student::where_studentid($id)->first();
+
+		if ($student->delete()) {
+			return Redirect::back()->with('success', 'Student successfuly deleted!');	
+		} else {
+			return Redirect::back()->with_errors(array('Deleting failed!'));
+		}
 
 	}
 
