@@ -14,10 +14,10 @@ class Student extends Aware {
 		'student_number' => 'required|integer|unique:student',
 	);
 
-	// public function enrollments()
-	// {
-	//   return $this->has_many('Enrollment');
-	// }
+	public function enrollments()
+	{
+	 	return $this->has_many('Enrollment', 'studentid');
+	}
 
 
 }

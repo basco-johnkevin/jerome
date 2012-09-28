@@ -55,14 +55,9 @@ Route::controller( array(
  *	custom routes that uses NOT NESTED CONTROLLERS
  */
 
-// find property
-//Route::get('find_prop', array('uses' => 'site@find_prop'));
 
-
-Route::get('/', function()
-{
-	return View::make('students.index');
-});
+// home
+Route::get('/', array('uses' => 'students@index'));
 
 	
 

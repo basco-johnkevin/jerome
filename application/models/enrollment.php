@@ -14,10 +14,10 @@ class Enrollment extends Aware {
 		'subjectsectionid' => 'required|integer|exists:subjectsection,subjectsectionid',
 	);
 
-	// public function enrollments()
-	// {
-	//   return $this->has_many('Enrollment');
-	// }
+	public function student()
+	{
+	  return $this->belongs_to('Student');
+	}
 
 
 }
