@@ -77,7 +77,7 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
                                 <li><a href="{{ action('subjectSections@add') }}">Add</a></li>
-                                <li><a href="#">Manage Subject Sections</a></li>
+                                <li><a href="{{ action('subjectSections@index') }}">Manage Subject Sections</a></li>
                             </ul>
                         </li>
 
