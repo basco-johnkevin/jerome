@@ -27,9 +27,10 @@
 		<table id="properties-table" class="table table-striped table-hover">
 			<thead>
 		      	<tr>
-		          	<th width="32%">Enrollment Id</th>
-		          	<th width="32%">Student</th>  
-		          	<th width="32%">Subject Section ID</th>                                      
+		          	<th width="25%">Enrollment Id</th>
+		          	<th width="25%">Student</th>  
+		          	<th width="25%">Subject Section ID</th>   
+		          	<th width="25%">Action</th>                                    
 		      </tr>
 		  	</thead>   
 		<tbody>
