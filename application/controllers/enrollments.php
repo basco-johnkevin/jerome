@@ -7,6 +7,8 @@ class Enrollments_Controller extends Base_Controller {
 	public function get_index()
 	{
 		// render the enrollment records
+		return View::make('enrollments.manage')
+			->with('enrollments', Enrollment::all());
 	}
 
 	public function get_add()
@@ -72,6 +74,19 @@ class Enrollments_Controller extends Base_Controller {
 		}
 
 	}
+
+	public function get_delete($id)
+	{
+		$enrollment = Enrollment::where_enrollmentid($id)->first();
+
+		if ($enrollment->delete()) {
+			return Redirect::back()->with('success', 'Enrollment record successfully deleted!');	
+		} else {
+			return Redirect::back()->with_errors(array('Deleting failed!'));
+		}
+	}
+
+
 
 
 

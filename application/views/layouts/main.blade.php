@@ -86,7 +86,7 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
                                 <li><a href="{{ action('enrollments@add') }}">Add</a></li>
-                                <li><a href="#">Manage Enrollments</a></li>
+                                <li><a href="{{ action('enrollments@index') }}">Manage Enrollments</a></li>
                             </ul>
                         </li>
 
