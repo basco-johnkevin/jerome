@@ -27,10 +27,10 @@
 		<table id="properties-table" class="table table-striped table-hover">
 			<thead>
 		      	<tr>
-		          	<th width="32%">ID</th>
-		          	<th width="32%">Name</th>  
-		          	<th width="32%">College Department</th>     
-		          	<th width="32%">Actions</th>                                     
+		          	<th width="25%">ID</th>
+		          	<th width="25%">Name</th>  
+		          	<th width="25%">College Department</th>     
+		          	<th width="25%">Actions</th>                                     
 		      </tr>
 		  	</thead>   
 		<tbody>

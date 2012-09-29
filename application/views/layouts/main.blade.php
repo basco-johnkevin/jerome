@@ -26,6 +26,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('img/apple-touch-icon-114-precomposed.png') }}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('img/apple-touch-icon-72-precomposed.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('img/apple-touch-icon-57-precomposed.png') }}">
+
+    <style type="text/css">
+        .span12 { margin-left: 0; }
+    </style>
+
 </head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
     <!--[if lt IE 7]>
