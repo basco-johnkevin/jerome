@@ -27,31 +27,28 @@
 		<table id="properties-table" class="table table-striped table-hover">
 			<thead>
 		      	<tr>
-		          	<th width="25%">ID</th>
-		          	<th width="25%">Name</th>
-		          	<th width="25%">Student Number</th> 
-		          	<th width="25%">Actions</th>                                           
+		          	<th width="32%">ID</th>
+		          	<th width="32%">Name</th>     
+		          	<th width="32%">Actions</th>                                     
 		      </tr>
 		  	</thead>   
 		<tbody>
 
-		@foreach($students as $student)
+		@foreach($collegeDepts as $collegeDept)
 
-			<!-- {{ $student->name }} -->
+		
 
 		    <tr>
-		        <td class="center">{{ $student->studentid }}</td>
-		        <td class="center title">{{ $student->name }}</td>
-		        <td class="center">{{ $student->student_number }}</td>
+		        <td class="center">{{ $collegeDept->collegedeptid }}</td>
+		        <td class="center title">{{ $collegeDept->collegedeptname }}</td>
 		       
 		       
 		        <td class="center">
 		     
-		           	<a href="{{ action('students@subjects', array($student->studentid)) }}" class="btn btn-info">Subjects</a>
-		           	<a href="{{ action('students@edit', array($student->studentid)) }}" class="btn btn-info">Edit</a>
-		            <a href="#myModal-delete-{{ $student->studentid }}" role="button" class="btn btn-danger" data-toggle="modal">Delete</a>
+		           	<a href="{{ action('collegeDept@edit', array($collegeDept->collegedeptid)) }}" class="btn btn-info">Edit</a>
+		            <a href="#myModal-delete-{{ $collegeDept->collegedeptid }}" role="button" class="btn btn-danger" data-toggle="modal">Delete</a>
 
-		            <div class="modal hide" id="myModal-delete-{{ $student->studentid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		            <div class="modal hide" id="myModal-delete-{{ $collegeDept->collegedeptid }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					 
 					<div class="modal-header">
 					    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -61,7 +58,7 @@
 					  <div class="modal-footer">
 					    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 					   <!--  <button class="btn btn-primary">Save changes</button> -->
-					    <a href="{{ action('students@delete', array($student->studentid)) }}" class="btn btn-danger">Confirm Delete</a> 
+					    <a href="{{ action('collegeDept@delete', array($collegeDept->collegedeptid)) }}" class="btn btn-danger">Confirm Delete</a> 
 					  </div>
 					</div>
 

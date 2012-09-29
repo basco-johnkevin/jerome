@@ -26,6 +26,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('img/apple-touch-icon-114-precomposed.png') }}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('img/apple-touch-icon-72-precomposed.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('img/apple-touch-icon-57-precomposed.png') }}">
+
+    <style type="text/css">
+        .span12 { margin-left: 0; }
+    </style>
+
 </head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
     <!--[if lt IE 7]>
@@ -59,7 +64,7 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
                                 <li><a href="{{ action('subjects@add') }}">Add</a></li>
-                                <li><a href="#">Manage Subjects</a></li>
+                                <li><a href="{{ action('subjects@index') }}">Manage Subjects</a></li>
                             </ul>
                         </li>
 
@@ -68,7 +73,7 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
                                 <li><a href="{{ action('collegeDept@add') }}">Add</a></li>
-                                <li><a href="#">Manage College Departments</a></li>
+                                <li><a href="{{ action('collegeDept@index') }}">Manage College Departments</a></li>
                             </ul>
                         </li>
 
@@ -77,7 +82,7 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
                                 <li><a href="{{ action('subjectSections@add') }}">Add</a></li>
-                                <li><a href="#">Manage Subject Sections</a></li>
+                                <li><a href="{{ action('subjectSections@index') }}">Manage Subject Sections</a></li>
                             </ul>
                         </li>
 
@@ -86,7 +91,7 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-header">Actions</li>
                                 <li><a href="{{ action('enrollments@add') }}">Add</a></li>
-                                <li><a href="#">Manage Enrollments</a></li>
+                                <li><a href="{{ action('enrollments@index') }}">Manage Enrollments</a></li>
                             </ul>
                         </li>
 
